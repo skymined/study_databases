@@ -12,10 +12,10 @@ def put_fruits(collection, fruits) : #  collection에 내용 집어넣기 위한
     collection.insert_many(fruits)
 
 # 삽입 리스트
-fruits = ({"과일명": "사과", "색상": "빨강", "원산지": "한국"},
+fruits = [{"과일명": "사과", "색상": "빨강", "원산지": "한국"},
         {"과일명": "바나나", "색상": "노랑", "원산지": "필리핀"},
         {"과일명": "오렌지", "색상": "주황", "원산지": "미국"},
-        {"과일명": "수박", "색상": "초록", "원산지": "한국"})
+        {"과일명": "수박", "색상": "초록", "원산지": "한국"}]
 
 collection = connect()
 put_fruits(collection, fruits)
