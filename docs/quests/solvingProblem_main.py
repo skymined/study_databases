@@ -8,8 +8,9 @@
 
 from solvingProblem_functions import solvingproblem
 
-set = solvingproblem("solvingproblem")
+set = solvingproblem("solvingproblem") #solvingproblem_function에 있는 클래스 instance
 
+# 각 함수들 사용
 set.mongo()
 set.makeit()
 set.updateit()

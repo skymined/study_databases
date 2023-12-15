@@ -1,7 +1,7 @@
 
 # list 불러오기
 
-class solvingproblem() : 
+class solvingproblem() :  # solvingproblem class 
     def __init__(self,collection) -> None:
         self.question_list=[]
         self.choices_list=[]
@@ -11,13 +11,13 @@ class solvingproblem() :
         self.collection=collection
         pass
 
-    def mongo (self):
+    def mongo (self): #mongodb 불러오기. collection은 변수로 설정
         from pymongo import MongoClient
         mongoclient = MongoClient("mongodb://localhost:27017")
         database = mongoclient["local"]
         self.collection = database[self.collection]
 
-    def makeit(self):
+    def makeit(self): #불러온 값들 재조립하는 과정 function
         result_list = self.collection.find({}, {"question" : 1,"choices":1, "answer":1, "score":1, "_id" :0})
         for i in range(5):
             self.question_list.append(result_list[i]["question"])
@@ -25,7 +25,7 @@ class solvingproblem() :
             self.answer_list.append(result_list[i]["answer"])
             self.score_list.append(result_list[i]["score"])
     
-    def updateit(self):
+    def updateit(self): # 문제와 답을 보여주고 사용자의 답을 update하는 함수 제작
         for j in range(1,6):
             print("{}번 문제".format(j), self.question_list[j-1])
             for i in range(1,5) : 
