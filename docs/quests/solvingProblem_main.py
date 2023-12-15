@@ -12,5 +12,5 @@ set = solvingproblem("solvingproblem") #solvingproblem_function에 있는 클래
 
 # 각 함수들 사용
 set.mongo()
-set.makeit()
+set.makeit("question", "choices", "answer", "score", "_id") # parameter 쓰고 싶어서 괜히 넣어보기
 set.updateit()
