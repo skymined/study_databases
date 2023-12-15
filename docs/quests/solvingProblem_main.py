@@ -11,6 +11,6 @@ from solvingProblem_functions import solvingproblem
 set = solvingproblem("solvingproblem") #solvingproblem_function에 있는 클래스 instance
 
 # 각 함수들 사용
-set.mongo()
+set.mongo() # mongo collection 불러오기
 set.makeit("question", "choices", "answer", "score", "_id") # parameter 쓰고 싶어서 괜히 넣어보기
-set.updateit()
+set.updateit() # 답을 받아서 mongodb에 update하기
