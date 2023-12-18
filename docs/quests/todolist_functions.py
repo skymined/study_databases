@@ -38,7 +38,7 @@ class todolistproblem() : #todolistproblem class
 
                 # 불러온 todo_list의 '_id'를 불러옴
                 
-                self.coll_parti_todo.insert_one({'참여자_id':parti_id,
+                self.coll_parti_todo.insert_one({'참여자_id':parti_id, '참여자' : parti,
                                                 "Todo title":todo_title, "Status":title_status})
                 
                 #종료 여부 확인
